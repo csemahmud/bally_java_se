@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;BS04InstanceOffApp&apos;&#x0D;&#x0A;- Original project: &apos;BS04InstanceOffApp&apos;&#x0D;&#x0A;- Original element: &apos;com.mahmud.BS04InstanceOffAppPackage.Other.java&apos;" description="Delete element" element1="/src&lt;com.mahmud.BS04InstanceOffAppPackage{Other.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1544770082295" subPackages="false" version="1.0"/>
+</session>

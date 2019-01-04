@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package com.mahmud.BS04InstanceOffAppPackage;
+
+/**
+ * @author MAHMUDUL HASAN KHAN CSE
+ *
+ */
+public class MainProgram {
+
+	/**
+		 * @author adm-hkhan
+		 *
+		 */
+	public class Other {
+
+		/**
+		 * 
+		 */
+		public Other() {
+			// TODO Auto-generated constructor stub
+		}
+
+	
+	/**
+		 * @author adm-hkhan
+		 *
+		 */
+	public interface Another {
+
+	}
+
+	public MainProgram() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+	}
+
+}

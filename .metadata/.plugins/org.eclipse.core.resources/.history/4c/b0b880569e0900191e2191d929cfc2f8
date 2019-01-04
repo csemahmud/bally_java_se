@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package com.mahmud.BS07SwitchCaseAppPackage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author MAHMUDUL HASAN KHAN CSE
+ *
+ */
+public class MainProgram {
+
+	/**
+	 * 
+	 */
+	public MainProgram() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("\n\n");
+		
+		List<String> futureMonths = new ArrayList<>();
+		
+		int currentMonth = 1;
+		
+		switch(currentMonth) {
+		case 1: futureMonths.add("");
+		case 2: futureMonths.add("");
+		case 3: futureMonths.add("");
+		case 4: futureMonths.add("");
+		case 5: futureMonths.add("");
+		case 6: futureMonths.add("");
+		case 7: futureMonths.add("");
+		case 8: futureMonths.add("");
+		case 9: futureMonths.add("");
+		case 10: futureMonths.add("");
+		case 11: futureMonths.add("");
+		case 12: futureMonths.add(""); 
+		}
+
+	}
+
+}

@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.mahmud.BS04InstanceOffAppPackage;
+
+/**
+ * @author adm-hkhan
+ *
+ */
+public class Other {
+
+	/**
+	 * 
+	 */
+	public Other() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
