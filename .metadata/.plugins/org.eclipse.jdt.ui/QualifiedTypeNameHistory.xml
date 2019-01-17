@@ -12,4 +12,7 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="com.mahmud.BS09BranchingAppPackage.MainProgram"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="com.mahmud.BS09BranchingAppPackage.MainProgram.SearchString"/>
 </qualifiedTypeNameHistroy>
