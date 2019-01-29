@@ -1,0 +1,251 @@
+/**
+ * 
+ */
+package com.mahmud.BS09BranchingAppPackage;
+
+/**
+ * @author MAHMUDUL HASAN KHAN CSE
+ *
+ */
+public class MainProgram {
+
+	/**
+		 * @author MAHMUDUL HASAN KHAN CSE
+		 *
+		 */
+	private class SearchString {
+		
+		private String mainString;
+		private String str;
+
+		/**
+		 * @param mainString
+		 */
+		public SearchString(String mainString) {
+			super();
+			this.mainString = mainString;
+			this.str = mainString;
+		}
+
+		public int calcChars(char ch) {
+			// TODO Auto-generated method stub
+			
+			int max = mainString.length();
+			
+			int chCounter = 0;
+			
+			str = "\t";
+			
+			for(int i = 0; i < max; i++) {
+				
+				// interested only in Given Character
+				
+				if(Character.toLowerCase(mainString.charAt(i)) 
+						!= Character.toLowerCase(ch)){
+					
+					str += mainString.charAt(i);
+					
+					continue;
+					
+				}
+				
+				// Count Character
+				
+				chCounter++;
+				
+				str += "'" + mainString.charAt(i) + "'[" + chCounter + "]";
+				
+			}
+			
+			return chCounter;
+		}
+		
+		public int findSubStr(String subString) {
+			
+			str = "\t";
+			
+			int max = mainString.length() - subString.length();
+			
+			boolean isFound = false;
+			int pos = 0;
+			
+			test:
+				
+				for(pos = 0; pos <= max; pos++) {
+					
+					int l = subString.length();
+					int i = pos;
+					int j = 0;
+					while(l-- != 0) {
+						
+						if(Character.toLowerCase(mainString.charAt(i++)) != 
+								Character.toLowerCase(subString.charAt(j++))) {
+							
+							str += mainString.charAt(pos);
+							continue test;
+							
+						}
+						
+					}
+					
+					str += "\"" + subString + "\"[" + pos + "]";
+					for(; i < mainString.length(); i++) {
+						
+						str += mainString.charAt(i);
+						
+					}
+					
+					isFound = true;
+					break test;
+					
+				}
+			
+			return isFound ? pos : -5;
+		}
+
+		/**
+		 * @param mainString the mainString to set
+		 */
+		public void setMainString(String mainString) {
+			this.mainString = mainString;
+		}
+
+		/**
+		 * @return the str
+		 */
+		public String getStr() {
+			return str;
+		}
+
+	}
+
+	/**
+	 * 
+	 */
+	public MainProgram() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("\n\n");
+
+		
+		int[][] arrayOfInts = {
+				
+				{32, 87, 3, 589},
+				{12, 1076, 2000, 8},
+				{622, 127, 77, 955}
+				
+		};
+		int searchFor = 12;
+		
+		int row;
+		int col = 0;
+		boolean isFound = false;
+		
+		search:
+			
+			for(row = 0; row < arrayOfInts.length; row++) {
+				
+				for(col = 0; col < arrayOfInts[row].length; col++) {
+					
+					if(arrayOfInts[row][col] == searchFor) {
+						
+						isFound = true;
+						break search;
+						
+					}
+					
+				}
+				
+			}
+		
+		if(isFound) {
+			
+			System.out.println("\tFound " + searchFor
+					+ " at (" + row + "," + col + ")");
+			
+		} else {
+			
+			System.out.println("\t " + searchFor
+					+ " not int he array.");
+			
+		}
+		
+		System.out.println();
+		
+		String searchMe = "Peter piper picked a"
+				+ " peck of pickled peppers .";
+		
+		SearchString searchStr = new MainProgram().new SearchString(searchMe);
+		
+		System.out.println("\tFound " + searchStr.calcChars('P')
+				+ " p's in the String. ");
+		
+		System.out.println(searchStr.getStr());
+		
+		System.out.println();
+		
+		searchMe = "Look for a Sub_sUB_String in me";
+		
+		searchStr.setMainString(searchMe);
+		
+		int pos = searchStr.findSubStr("SUB_");
+		
+		System.out.println(pos >= 0 ? "\tFound it at position : " + pos : 
+						"\tCould not find it.");
+		
+		System.out.println(searchStr.getStr());
+		
+		System.out.println();
+		
+		outer:
+			for(;;) {
+				
+				System.out.println("\tBefore While");
+				
+				while(true) {
+					
+					System.out.println("\tInside While");
+					break outer;
+					
+//					System.out.println(
+//							"\tThis will never be printed");
+					
+					// Compiler Error
+					// Unreachable Code
+					
+				}
+				
+			}
+		
+		outer:
+			for(int i = 0; i < 3; i++) {
+				
+				System.out.println("\tBefore While");
+				
+				while(true) {
+					
+					System.out.println("\tInside While");
+					break outer;
+					
+					System.out.println(
+							"\tThis will never be printed");
+					
+					// Compiler Error
+					// Unreachable Code
+					
+				}
+				
+			}
+		
+		System.out.println("\tOutside for");
+		
+	}
+
+}

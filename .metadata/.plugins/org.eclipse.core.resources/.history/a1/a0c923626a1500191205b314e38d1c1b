@@ -1,0 +1,135 @@
+/**
+ * 
+ */
+package com.mahmud.BS09BranchingAppPackage;
+
+/**
+ * @author MAHMUDUL HASAN KHAN CSE
+ *
+ */
+public class MainProgram {
+
+	/**
+		 * @author MAHMUDUL HASAN KHAN CSE
+		 *
+		 */
+	private class SearchString {
+		
+		private String mainString;
+
+		/**
+		 * @param mainString
+		 */
+		public SearchString(String mainString) {
+			super();
+			this.mainString = mainString;
+		}
+
+		public int calcChars(char ch) {
+			// TODO Auto-generated method stub
+			
+			int max = mainString.length();
+			
+			int chCounter = 0;
+			
+			String str = "\t";
+			
+			for(int i = 0; i < max; i++) {
+				
+				str += mainString.charAt(i);
+				
+				// interested only in Given Character
+				
+				if(Character.toLowerCase(mainString.charAt(i)) 
+						!= Character.toLowerCase(ch)){
+					
+					continue;
+					
+				}
+				
+				// Count Character
+				
+				chCounter++;
+				
+				str += "[" + chCounter + "]";
+				
+			}
+			
+			System.out.println(str);
+			
+			return chCounter;
+		}
+
+	}
+
+	/**
+	 * 
+	 */
+	public MainProgram() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("\n\n");
+
+		
+		int[][] arrayOfInts = {
+				
+				{32, 87, 3, 589},
+				{12, 1076, 2000, 8},
+				{622, 127, 77, 955}
+				
+		};
+		int searchFor = 12;
+		
+		int row;
+		int col = 0;
+		boolean isFound = false;
+		
+		search:
+			
+			for(row = 0; row < arrayOfInts.length; row++) {
+				
+				for(col = 0; col < arrayOfInts[row].length; col++) {
+					
+					if(arrayOfInts[row][col] == searchFor) {
+						
+						isFound = true;
+						break search;
+						
+					}
+					
+				}
+				
+			}
+		
+		if(isFound) {
+			
+			System.out.println("\tFound " + searchFor
+					+ " at (" + row + "," + col + ")");
+			
+		} else {
+			
+			System.out.println("\t " + searchFor
+					+ " not int he array.");
+			
+		}
+		
+		System.out.println();
+		
+		
+		
+		String searchMe = "Peter piper picked a"
+				+ " peck of pickled peppers .";
+		int numPs = new MainProgram().new SearchString(searchMe).calcChars('P');
+		System.out.println("\tFound " + numPs
+				+ " p's in the String. ");
+		
+	}
+
+}
